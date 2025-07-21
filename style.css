@@ -1,0 +1,61 @@
+:root {
+            --primary-color: #FFEDD0; /* Bege claro principal */
+            --secondary-color: #E8D5B5; /* Bege mais escuro */
+            --accent-color: #D4B483; /* Bege acobreado */
+            --text-dark: #5A4A42; /* Marrom escuro para texto */
+            --text-medium: #7A6B64; /* Marrom médio */
+            --text-light: #9C8D86; /* Marrom claro */
+            --bg-light: #FFF9F0; /* Fundo bege muito claro */
+            --gradient-start: rgba(255, 237, 208, 0.5);
+            --gradient-end: rgba(232, 213, 181, 0.7);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .btn-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .btn-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-blur {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .hero-bg {
+            background-color: var(--bg-light);
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(255, 237, 208, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(232, 213, 181, 0.3) 0%, transparent 50%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+        }
