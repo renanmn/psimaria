@@ -59,3 +59,151 @@
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
         }
+
+
+/*demandas*/
+/* Herda fonte do site */
+.demandas-section {
+  padding: 60px 20px;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+/* Centraliza conteúdo */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Título centralizado */
+.titulo-section {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--text-dark);
+  font-weight: bold;
+}
+
+/* Grid 3x2 com responsividade */
+.demandas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 900px) {
+  .demandas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .demandas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cartões */
+.demanda {
+  background-color: var(--primary-color);
+  padding: 24px;
+  border-radius: 16px;
+  /*border: 1px solid var(--accent-color);*/
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animação já vem do card-hover */
+.demanda:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Título do card */
+.demanda h3 {
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* Texto do card */
+.demanda p {
+  font-size: 1rem;
+  color: var(--text-medium);
+  line-height: 1.6;
+}
+/*duvidas*/
+.faq-section {
+  background-color: var(--bg-light);
+  padding: 60px 20px;
+  color: var(--text-dark);
+  width: 100%;
+}
+
+.faq-section > div {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+.faq-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-dark);
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: left;
+  font-family: inherit;
+  cursor: pointer;
+  color: var(--text-dark);
+  transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+  background-color: var(--secondary-color);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1rem;
+  color: var(--text-medium);
+  font-size: 0.95rem;
+  transition: max-height 0.4s ease, padding 0.3s;
+}
+
+.faq-item.active .faq-answer {
+  padding: 1rem;
+  max-height: 300px;
+}
+
+/* Não há alterações nas suas variáveis de cor ou estilos gerais já existentes */
+
+/* Não é necessário CSS adicional significativo para este layout, pois ele usa principalmente classes Tailwind
+   e suas variáveis de cor. A transição para hover em .demanda já cobre o que seria necessário aqui. */
+
+/* Se quiser garantir que os passos tenham um hover, pode adicionar: */
+.tcc-step {
+    transition: transform 0.2s ease; /* Adiciona uma pequena transição para um hover sutil */
+}
+
+.tcc-step:hover .tcc-step-number {
+    transform: scale(1.1); /* Ícone/número cresce um pouco no hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra sutil no hover */
+}
